@@ -4,24 +4,52 @@
     <title>Parking Permit Website</title>
     <style>
       /* CSS code */
-      #links li a {
-        color: black;
-        text-decoration: none;
-        transition: color 0.2s;
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.4;
       }
-      #links li a:hover {
-        color: #ff6666;
+      #header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+      #header h1 {
+        margin: 0;
       }
       #links {
-        background-color: red;
+        background-color: #ff6666;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+      }
+      #links li {
+        margin: 0;
+        padding: 0;
+      }
+      #links li a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.2s;
+      }
+      #links li a:hover {
+        background-color: #e65c5c;
       }
     </style>
   </head>
   <body>
-    <h1>Welcome to the Parking Permit Website</h1>
-    <ul id="links">
-      <li><a href="login.html">Login</a></li>
-    </ul>
+    <header id="header">
+      <h1>Parking Permit Website</h1>
+    </header>
+    <nav id="nav">
+      <ul id="links">
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
 
     <script>
       const isLoggedIn = true; // Set to true if user is logged in, false otherwise
