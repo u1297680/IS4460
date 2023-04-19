@@ -2,6 +2,20 @@
 <html>
   <head>
     <title>Parking Permit Website</title>
+    <style>
+      /* CSS code */
+      #links li a {
+        color: black;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      #links li a:hover {
+        color: #ff6666;
+      }
+      #links {
+        background-color: red;
+      }
+    </style>
   </head>
   <body>
     <h1>Welcome to the Parking Permit Website</h1>
