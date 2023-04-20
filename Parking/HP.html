@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-  // Check if the username and password are correct
+  // Chec if the username and password are correct
   if ($username === 'admin' && $password === 'password123') {
     // If the user is authenticated, set their role to admin
     $role = 'admin';
