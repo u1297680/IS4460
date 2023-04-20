@@ -1,6 +1,3 @@
-<?php
-require_once('sessioncheck.php');
-?>
 
 <!DOCTYPE html>
 <html>
