@@ -1,7 +1,14 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Personal Information</title>
+    
+    <?php
+require_once('sessioncheck.php');
+?>
+
+    
     <style>
       body {
         background-color: #f2f2f2;
