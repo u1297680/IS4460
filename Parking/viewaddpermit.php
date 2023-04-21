@@ -1,7 +1,15 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>View/Add Permit</title>
+    
+    
+    <?php
+require_once('sessioncheck.php');
+?>
+
+    
     <style>
       body {
         background-color: #f2f2f2;
