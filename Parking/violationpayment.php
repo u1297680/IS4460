@@ -1,7 +1,45 @@
+
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Violation Payment</title>
+    
+    <?php
+require_once('sessioncheck.php');
+?>
+
+    
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+      }
+      h1 {
+        color: #333333;
+      }
+      h2 {
+        color: #666666;
+      }
+      label {
+        display: block;
+        color: #666666;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      input[type="submit"] {
+        background-color: #ff4d4d;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      input[type="submit"]:hover {
+        background-color: #cc0000;
+      }
+    </style>
   </head>
   <body>
     <h1>Violation Payment</h1>
