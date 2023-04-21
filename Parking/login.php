@@ -1,7 +1,34 @@
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Parking Space Manager - Login</title>
+	<title>Student Parking - Login</title>
+	
+<?php
+session_start();
+
+
+if (isset($_POST['submit'])) {
+
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  $username = filter_var($username, FILTER_SANITIZE_STRING);
+  $password = filter_var($password, FILTER_SANITIZE_STRING);
+  if ($username == "admin" && password_verify($password, 'QFJzO56')) {
+ 
+    $_SESSION['username'] = $username;
+    header("Location: index.php");
+   
+exit();
+ 
+  } else {
+    $error = "Invalid username or password";
+  }
+}
+?>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
@@ -17,11 +44,45 @@
 		h1 {
 			margin: 0;
 		}
+		nav {
+			background-color: #f44336;
+			color: #fff;
+			padding: 10px;
+		}
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		nav li {
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			padding: 10px;
+			border-radius: 5px;
+			transition: background-color 0.2s ease-in-out;
+		}
+		nav a:hover {
+			background-color: #b71c1c;
+		}
+		main {
+			margin: 50px auto;
+			max-width: 400px;
+		}
+		h2 {
+			text-align: center;
+		}
 		form {
 			border: 1px solid #ccc;
 			padding: 20px;
-			margin: 50px auto;
-			max-width: 400px;
+			margin-top: 20px;
 		}
 		label {
 			display: block;
@@ -46,13 +107,11 @@
 </head>
 <body>
 	<header>
-		<h1>Parking Space Manager</h1>
+		<h1>Student Parking Manager</h1>
 	</header>
 	<nav>
 		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="parkingspaces.html">Parking Spaces</a></li>
-			<li><a href="login.html">Login</a></li>
+			
 		</ul>
 	</nav>
 	<main>
@@ -77,9 +136,11 @@
 				window.location.href = "index.html";
 			} else {
 				// Show an error message
-				alert("Incorrect username or password. Please try again.");
+				alert
+			("Invalid login credentials. Please try again.");
 			}
-		}
-	</script>
+			}
+</script>
+
 </body>
 </html>
