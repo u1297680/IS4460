@@ -1,8 +1,53 @@
 
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>View/Pay Permit</title>
+   
+    <?php
+require_once('sessioncheck.php');
+?>
+    
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: #d40000;
+      }
+      h2 {
+        font-size: 1.2em;
+        margin-top: 20px;
+      }
+      label {
+        display: block;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      input[type="number"], 
+      input[type="text"] {
+        padding: 10px;
+        font-size: 1.2em;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+      }
+      input[type="submit"] {
+        background-color: #d40000;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      input[type="submit"]:hover {
+        background-color: #b30000;
+      }
+    </style>
   </head>
   <body>
     <h1>View/Pay Permit</h1>
@@ -13,19 +58,14 @@
     <form>
       <label for="amount">Amount:</label>
       <input type="number" id="amount" name="amount" value="50">
-      <br><br>
       <label for="cardnumber">Card Number:</label>
       <input type="text" id="cardnumber" name="cardnumber">
-      <br><br>
       <label for="cardname">Cardholder Name:</label>
       <input type="text" id="cardname" name="cardname">
-      <br><br>
       <label for="expirationdate">Expiration Date:</label>
       <input type="text" id="expirationdate" name="expirationdate">
-      <br><br>
       <label for="cvv">CVV:</label>
       <input type="text" id="cvv" name="cvv">
-      <br><br>
       <input type="submit" value="Submit Payment">
     </form>
   </body>
